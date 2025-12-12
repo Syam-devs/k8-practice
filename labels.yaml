@@ -1,0 +1,14 @@
+apiversion: v1 
+kind: Pod
+metadata:
+  name: labels
+  labels:
+    project: roboshop
+    environment: dev
+    purpose: mysql
+    tier: backend
+    component: mysql
+spec:
+  containers:
+  - name: mysql
+    image: mysql  

@@ -1,0 +1,23 @@
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-bundle.crt
+logfile        /var/log/msmtp.log
+
+account        gmail
+host           smtp.gmail.com
+port           587
+from           syamdatti8.com
+user           syamdatti8.com
+password       your_app_password
+
+account default : gmail
+
+
+{
+echo "To: muralikrishnan31@gmail.com"
+echo "Subject: Prometheus mail testing"
+echo "Content-Type: text/html"
+echo ""
+echo "Prometheus mail testing alert"
+} | msmtp "muralikrishnan31@gmail.com"

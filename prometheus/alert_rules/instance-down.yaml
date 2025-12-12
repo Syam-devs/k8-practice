@@ -1,0 +1,13 @@
+groups:
+- name: instanceDown
+  labels:
+    team: monitoring
+  rules:
+  - alert: HighRequestLatency
+    expr: up < 1
+    for: 1m
+    keep_firing_for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "instance {{ $labels.instance_id }} down"

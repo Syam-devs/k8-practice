@@ -1,0 +1,11 @@
+[Unit]
+Description=promethues service 
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/prometheus/prometheus --config.file=prometheus.yml
+ExecStart=/usr/bin/python3 app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

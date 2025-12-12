@@ -1,0 +1,21 @@
+apiversion: v1 
+kind: Pod
+metadata:
+  name: labels
+  labels:
+    project: roboshop
+    environment: dev
+    purpose: mysql
+    tier: backend
+    component: mysql
+spec:
+  containers:
+  - name: mysql
+    image: mysql
+    resources:
+      requests:
+        memory: "68Mi"
+        cpu: "100m"
+      limits:
+        memory: "128Mi"
+        cpu: "200m"
