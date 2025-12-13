@@ -1,5 +1,3 @@
-# spot-cluster.yaml
-
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
@@ -8,7 +6,24 @@ metadata:
   region: us-east-1
 
 managedNodeGroups:
-- name: roboshop
-  instanceTypes: t3.large
-  desiredCapacity: 2
-  spot: true
+  - name: roboshop
+    instanceTypes:
+      - t3.large
+      - t2.large
+    desiredCapacity: 2
+    spot: true
+
+ # spot-cluster.yaml
+
+# apiVersion: eksctl.io/v1alpha5
+# kind: ClusterConfig
+
+# metadata:
+#   name: roboshop
+#   region: us-east-1
+
+# managedNodeGroups:
+# - name: roboshop
+#   instanceTypes: [ t3.large ]
+#   desiredCapacity: 2
+#   spot: true
