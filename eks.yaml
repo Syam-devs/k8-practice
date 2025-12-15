@@ -7,10 +7,7 @@ metadata:
 
 managedNodeGroups:
   - name: roboshop-spot-ng
-    instanceTypes:
-      - c7i-flex.large
-      - t3.small
-      - t3.micro
+    instanceTypes: c7i-flex.large
     desiredCapacity: 2
     minSize: 1
     maxSize: 4
