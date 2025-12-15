@@ -9,10 +9,9 @@ managedNodeGroups:
   - name: roboshop-spot-ng
     instanceTypes:
       - m5.large
-      - m5a.large
-      - c5.large
-      - c5a.large
-      - t3.large
+      - c7i-flex.large
+      - t3.small
+      - t3.micro
     desiredCapacity: 2
     minSize: 1
     maxSize: 4
