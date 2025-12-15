@@ -6,10 +6,18 @@ metadata:
   region: us-east-1
 
 managedNodeGroups:
-  - name: roboshop-1
-    instanceTypes: ["m5.large","c4.large","c5.large"]
+  - name: roboshop-spot-ng
+    instanceTypes:
+      - m5.large
+      - m5a.large
+      - c5.large
+      - c5a.large
+      - t3.large
     desiredCapacity: 2
+    minSize: 1
+    maxSize: 4
     spot: true
+
 
  # spot-cluster.yaml
 
