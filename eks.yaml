@@ -9,7 +9,7 @@ managedNodeGroups:
   - name: roboshop-spot-ng
     instanceTypes: 
       - c7i-flex.large
-    desiredCapacity: 2
+    desiredCapacity: 3
     minSize: 1
     maxSize: 4
     spot: true
